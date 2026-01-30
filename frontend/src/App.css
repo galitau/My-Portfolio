@@ -359,7 +359,6 @@ body {
 .page-header { text-align: center; margin-bottom: 5rem;}
 .page-header h1 { font-size: 3.5rem; color: var(--primary); }
 .page-header p { font-size: 1.4rem; color: var(--text-light); }
-.page-container--software { margin-left: 7rem; }
 
 .resume-button {
   display: inline-block;
@@ -574,23 +573,121 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
-/* ==================== RESPONSIVE ==================== */
+/* ==================== RESPONSIVE Section ==================== */
+
+/* --- Tablet / Small Desktop (max-width: 1200px) --- */
 @media (max-width: 1200px) {
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .coursework-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-content { flex-direction: column; text-align: center; }
-  .hero-right { padding: 0; align-items: center; }
+  /* Keep your existing 2-column grid for tablets */
+  .projects-grid, .coursework-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  /* Center the Hero section */
+  .hero-content { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  
+  .hero-right { 
+    padding: 0; 
+    align-items: center; 
+    justify-content: center;
+  }
 }
+
+/* --- Mobile / Phones (max-width: 768px) --- */
 @media (max-width: 768px) {
-  .project-card-container, 
-  .project-card.slider {
-    height: 35rem; /* Even shorter on mobile */
+
+  /* Reset the main layout*/
+  body, .main-content, .software-page, .container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Prevents padding from causing scrollbars */
   }
-  
-  .project-card-container, 
-  .project-card.slider {
+
+  /* Reset the outer bar */
+  .navbar {
+    position: relative; /* Stops it from floating over content on mobile */
     height: auto;
-    min-height: 35rem;
+    padding: 0;
   }
+
+  /* Fix the Container (The layout box) */
+  .nav-container {
+    flex-direction: column; /* Stack Logo on top, Links below */
+    padding: 1rem;          /* Reduce that huge 4rem padding to 1rem */
+    gap: 1rem;              /* Add space between Logo and Links */
+  }
+
+  /* Fix the Menu (The Links) */
+  .nav-menu {
+    gap: 1.5rem;            /* Shrink gap from 3rem to 1.5rem */
+    flex-wrap: wrap;        /* Allow links to flow to a second line if needed */
+    justify-content: center; /* Center them */
+    width: 100%;
+  }
+
+  /* Fix individual links */
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  /* Force single column */
+  .projects-grid, .coursework-grid { 
+    grid-template-columns: 1fr; /* 1 column only */
+    gap: 2rem;
+  }
+
+  /* 4. CARD SIZING & TEXT */
+  .project-card-container, 
+  .project-card.slider,
+  .project-card {
+    width: 100%;      /* Full width */
+    height: auto;     /* Let content dictate height */
+    min-height: 45rem;
+  }
+
+  /* Fix Header Sizes so they don't wrap weirdly */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
   
+  /* Force the Main Hero Container to Stack Vertically */
+  .hero-content, .hero, .hero-container {
+    display: flex !important;
+    flex-direction: column !important; /* Stack top-to-bottom */
+    align-items: center !important;    /* Center horizontally */
+    text-align: center !important;     /* Center text */
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+
+  /* Target EVERY div inside the hero (Left/Right/Text/Image wrappers) */
+  .hero-content > div, .hero > div, .hero-left, .hero-right {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Forces the invisible box to center */
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 0 2rem 0 !important; /* Add space between stacked items */
+    padding: 0 !important;
+  }
+
+  /* Force the Profile Image to behave */
+  .hero img, .hero-content img, .profile-pic {
+    display: block !important;
+    margin: 0 auto !important; /* The classic "Center Me" rule */
+    max-width: 250px !important;
+  }
+
+  /* Force Text Headings to Center */
+  .hero h1, .hero h2, .hero p {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
 }
+  

@@ -14,7 +14,7 @@ function Software({ projects }) {
   );
 
   return (
-    <div className="page-container page-container--software">
+    <div className="page-container page-container">
       <div className="page-header">
         <h1>Software Engineering</h1>
         <p>Building intelligent systems through code</p>
