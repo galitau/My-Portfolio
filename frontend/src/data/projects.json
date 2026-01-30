@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "title": "Pubmed RAG Researcher",
+    "category": "software",
+    "tags": ["AI/ML", "Python", "Biomedical"],
+    "description": "An AI-powered research assistant designed to accelerate systematic reviews. It automates literature retrieval from Pubmed, generating concise summaries of key findings and identifying the best article for immediate reading. The tool features an interactive RAG chatbot to talk with the data and exports all insights as a structured PDF report.",
+    "imageNames": [
+      "pubmedPhoto.png"
+    ],
+    "github": "https://github.com/galitau/Pubmed-RAG"
+  },
+  {
+    "id": 2,
+    "title": "Accessible Product Redesign (Settlers of Catan)",
+    "category": "mechanical",
+    "tags": ["CAD/Design", "Biomedical", "Mechanics"],
+    "description": "Engineered a modular, magnetically coupled game board to accommodate users with neurological tremors. Performed detailed CAD modeling in SolidWorks to design a custom system that prevents piece displacement. Utilized Quality Function Deployment (QFD) to translate user needs into CAD constraints and validated the physical design using a digital force gauge (100 Hz sampling) and regression analysis.",
+    "imageNames": [
+      "CatanSideView.jpg",
+      "CatanSideView2.jpg",
+      "Solidworks Assembly Catan.jpeg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "TimeSense | Productivity and Analytics App",
+    "category": "software",
+    "tags": ["Mobile App", "Java", "SQL"],
+    "description": "A native mobile app built in Java to improve focus and tracking. It utilizes a foreground service to monitor usage patterns and actively block distracting applications. The app uses local storage and SQLite to log session data, allowing users to compare their planned schedule against actual performance.",
+    "imageNames": [
+      "timeSensePhoto.png"
+    ],
+    "github": "https://github.com/galitau/TimeSense"
+  },
+  {
+    "id": 4,
+    "title": "Dynamic Motion Translation Mechanism",
+    "category": "mechanical",
+    "tags": ["CAD/Design", "Mechanics"],
+    "description": "Engineered a kinetic mechanical flower assembly in SolidWorks, utilizing crossed helical gears to translate rotational input into the synchronized blooming of multiple petals. Conducted rigorous tolerance analysis to optimize component fit for manufacturing, ensuring smooth mechanical operation with minimal friction. Fabricated and assembled physical prototypes, iterating on gear geometry to maximize power transmission efficiency and structural integrity.",
+    "imageNames": [
+      "Puzzle video~2.mp4",
+      "Open Flower.jpeg",
+      "Closed Flower.jpeg",
+      "AssemblyList.png",
+      "Design Process Flower.jpeg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Toy Jeep Model and Assembly",
+    "category": "mechanical",
+    "tags": ["CAD/Design"],
+    "description": "Modeled a multi-component assembly in SolidWorks, including a chassis, independent door panels, and wheel systems, utilizing standard mates to define mechanical relationships between moving parts. Generated technical engineering drawings featuring exploded views and cross-sections to visualize internal component clearances and communicate the step-by-step assembly process.",
+    "imageNames": [
+      "JeepVideo.mp4",
+      "JeepAssemblyImage.png",
+      "JeepExplodedView.png",
+      "JeepExplodedViewDrawing.png",
+      "JeepCrossSection.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "BrickbyBrick | Full-Stack FinTech Platform",
+    "category": "software",
+    "tags": ["Web Dev", "Python", "Data Eng"],
+    "description": "Winner of 'Best Use of Snowflake API' at the SheHacks Hackathon (Western University). Created a fractional real estate investment platform designed to lower the barrier to homeownership. Built with a Python backend and JavaScript frontend, it utilizes a database pipeline to bridge Snowflake housing data with MongoDB user records. The system allows investors to purchase property shares while enabling homeowners to list assets and keep a minimum of 51% ownership, tracking all transactions in a real-time portfolio dashboard.",
+    "imageNames": [
+      "BrickbyBrick Dashboard.png"
+    ],
+    "github": "https://github.com/galitau/BrickbyBrick"
+  },
+  {
+    "id": 7,
+    "title": "StoryBridge | Multi-Model AI Orchestration Pipeline",
+    "category": "software",
+    "tags": ["AI/ML", "Python", "Biomedical"],
+    "description": "Winner of 'Most Innovative Feature' at the Waterloo Women in Engineering Hackathon. Developed an end-to-end AI pipeline in Python that transforms seniors' spoken memories into illustrated comic narratives. Integrated Deepgram for speech-to-text (NLP), Moonshot AI for summarization, and FLUX.1 for computer vision image generation to support memory care in healthcare settings.",
+    "imageNames": [
+      "StoryBridge.png"
+    ],
+    "github": "https://github.com/galitau/WIE-Hackathon-Code"
+  },
+  {
+    "id": 8,
+    "title": "Wheel of Fortune Game",
+    "category": "software",
+    "tags": ["Java"],
+    "description": "A desktop game application built entirely in Java. It features a custom graphical interface (GUI) and a persistent high-score system powered by local file I/O. The project demonstrates strong Object-Oriented design, utilizing multi-threading for animations and complex string manipulation algorithms for the puzzle logic.",
+    "imageNames": [
+      "WheelGame.png"
+    ],
+    "github": "https://github.com/galitau/WheelOfFortuneGame"
+  }
+]
