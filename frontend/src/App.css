@@ -573,6 +573,245 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
+/* ==================== MOBILE HOME STYLES ==================== */
+.mobile-home {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 0; /* No navbar padding needed on mobile */
+}
+
+.mobile-hero {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--white) 100%);
+}
+
+.mobile-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.mobile-hero-text h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.mobile-hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mobile-hero-description {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+.mobile-hero-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--secondary);
+  box-shadow: 0 4px 16px var(--shadow-hover);
+}
+
+.mobile-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-section {
+  padding: 3rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-section h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mobile-section h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.mobile-section p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Filter Buttons */
+.mobile-filter-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--white);
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.filter-btn.active {
+  background: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+
+/* Mobile Projects Grid */
+.mobile-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Mobile Education */
+.mobile-education-item {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary);
+  box-shadow: 0 2px 8px var(--shadow);
+  text-align: left;
+}
+
+.mobile-education-item h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.mobile-education-detail {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0.5rem 0;
+}
+
+.mobile-clubs-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.mobile-clubs-list > li {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.mobile-clubs-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.mobile-clubs-sublist li {
+  margin: 0.5rem 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+}
+
+/* Mobile Coursework */
+.mobile-coursework-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mobile-course-item {
+  padding: 1.5rem;
+  background: var(--white);
+  border-left: 3px solid var(--secondary);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.mobile-course-item:hover {
+  transform: translateX(5px);
+  background: #f8f9fa;
+}
+
+/* Mobile Skills Marquee */
+.mobile-skills-marquee {
+  overflow: hidden;
+  background: linear-gradient(to right, #2c3e50, #34495e, #2c3e50);
+  padding: 2rem 0;
+  border-top: 2px solid var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+  position: relative;
+}
+
+.mobile-skills-marquee::before, 
+.mobile-skills-marquee::after {
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  width: 100px; 
+  z-index: 2; 
+  pointer-events: none;
+}
+
+.mobile-skills-marquee::before { 
+  left: 0; 
+  background: linear-gradient(to right, #2c3e50, transparent); 
+}
+
+.mobile-skills-marquee::after { 
+  right: 0; 
+  background: linear-gradient(to left, #2c3e50, transparent); 
+}
+
+/* Adjust main content padding for mobile */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 0 !important; /* Remove top padding since no navbar */
+  }
+}
+
 /* ==================== RESPONSIVE Section ==================== */
 
 /* --- Tablet / Small Desktop (max-width: 1200px) --- */
@@ -597,97 +836,16 @@ body {
 
 /* --- Mobile / Phones (max-width: 768px) --- */
 @media (max-width: 768px) {
-
-  /* Reset the main layout*/
-  body, .main-content, .software-page, .container {
+  /* Only keep essential mobile overrides - rest is handled by MobileHome component */
+  
+  /* Hide desktop-specific elements on mobile */
+  .navbar { display: none; }
+  
+  /* Ensure full width on mobile */
+  body, .main-content {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding: 1rem;
     width: 100%;
-    box-sizing: border-box; /* Prevents padding from causing scrollbars */
+    box-sizing: border-box;
   }
-
-  /* Reset the outer bar */
-  .navbar {
-    position: relative; /* Stops it from floating over content on mobile */
-    height: auto;
-    padding: 0;
-  }
-
-  /* Fix the Container (The layout box) */
-  .nav-container {
-    flex-direction: column; /* Stack Logo on top, Links below */
-    padding: 1rem;          /* Reduce that huge 4rem padding to 1rem */
-    gap: 1rem;              /* Add space between Logo and Links */
-  }
-
-  /* Fix the Menu (The Links) */
-  .nav-menu {
-    gap: 1.5rem;            /* Shrink gap from 3rem to 1.5rem */
-    flex-wrap: wrap;        /* Allow links to flow to a second line if needed */
-    justify-content: center; /* Center them */
-    width: 100%;
-  }
-
-  /* Fix individual links */
-  .nav-link {
-    font-size: 1rem;
-  }
-
-  /* Force single column */
-  .projects-grid, .coursework-grid { 
-    grid-template-columns: 1fr; /* 1 column only */
-    gap: 2rem;
-  }
-
-  /* 4. CARD SIZING & TEXT */
-  .project-card-container, 
-  .project-card.slider,
-  .project-card {
-    width: 100%;      /* Full width */
-    height: auto;     /* Let content dictate height */
-    min-height: 45rem;
-  }
-
-  /* Fix Header Sizes so they don't wrap weirdly */
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  
-  /* Force the Main Hero Container to Stack Vertically */
-  .hero-content, .hero, .hero-container {
-    display: flex !important;
-    flex-direction: column !important; /* Stack top-to-bottom */
-    align-items: center !important;    /* Center horizontally */
-    text-align: center !important;     /* Center text */
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 1rem !important;
-  }
-
-  /* Target EVERY div inside the hero (Left/Right/Text/Image wrappers) */
-  .hero-content > div, .hero > div, .hero-left, .hero-right {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* Forces the invisible box to center */
-    justify-content: center !important;
-    text-align: center !important;
-    margin: 0 0 2rem 0 !important; /* Add space between stacked items */
-    padding: 0 !important;
-  }
-
-  /* Force the Profile Image to behave */
-  .hero img, .hero-content img, .profile-pic {
-    display: block !important;
-    margin: 0 auto !important; /* The classic "Center Me" rule */
-    max-width: 250px !important;
-  }
-
-  /* Force Text Headings to Center */
-  .hero h1, .hero h2, .hero p {
-    text-align: center !important;
-    width: 100% !important;
-  }
-
 }
-  

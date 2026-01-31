@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import './App.css';
 
@@ -10,6 +10,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Software from './Software';
 import Mechanical from './Mechanical';
+import MobileHome from './MobileHome';
 
 // Imports images
 import catan1 from './assets/CatanSideView.jpg';
@@ -56,6 +57,19 @@ const imageMap = {
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile devices
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Takes the simple text data and adds the images to it
   const projects = projectsData.map(project => ({
@@ -66,6 +80,12 @@ function App() {
 
   // Renders the current page based on state
   const renderPage = () => {
+    // Use mobile layout on mobile devices
+    if (isMobile) {
+      return <MobileHome projects={projects} />;
+    }
+    
+    // Use desktop layout
     switch(currentPage) {
       case 'home': return <Hero />;
       // Pass the data to the pages
@@ -77,11 +97,12 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {/* Only show navbar on desktop */}
+      {!isMobile && <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />}
       <main className="main-content">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentPage}
+            key={isMobile ? 'mobile' : currentPage}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
