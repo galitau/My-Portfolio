@@ -147,24 +147,30 @@ body {
 .hero-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 6rem;
-  margin-right: 25rem;
-  margin-left: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 120rem;
   min-height: 43.75rem;
+  gap: 4rem;
+  padding: 0 4rem;
 }
 
 .hero-left { 
-  padding: 0 5rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem; 
+  justify-content: center;
+  max-width: 50rem;
 } 
 
 .hero-right {
-  padding: 0 5rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image {
