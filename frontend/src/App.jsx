@@ -31,6 +31,8 @@ import bbbDashboard from './assets/BrickbyBrick Dashboard.png';
 import storyBridge from './assets/StoryBridge.png';
 import assemblylist from './assets/AssemblyList.png';
 import wheeloffortune from './assets/WheelGame.png';
+import squatCam from './assets/SquatCAM.png';
+import teddyBank from './assets/TeddyBank.png';
 
 
 // Connects the JSON text to the import above
@@ -53,6 +55,8 @@ const imageMap = {
   'StoryBridge.png': storyBridge,
   'AssemblyList.png': assemblylist,
   'WheelGame.png': wheeloffortune,
+  'SquatCAM.png': squatCam,
+  'TeddyBank.png': teddyBank
 };
 
 function App() {

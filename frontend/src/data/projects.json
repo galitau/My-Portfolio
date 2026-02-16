@@ -1,5 +1,27 @@
 [
   {
+    "id": 10,
+    "title": "TeddyBank | Financial Literacy Platform",
+    "category": "software",
+    "tags": ["Web Dev", "React", "AI/ML", "FinTech"],
+    "description": "Winner of the Wealthsimple Challenge at the ElleHacks Hackathon (York University). TeddyBank is a full-stack IoT financial-literacy platform that connects physical hardware with a cloud dashboard to make money tangible and interactive for kids. It transforms transaction data into gamified tasks, stock simulations, and AI-generated multilingual stories delivered through voice. The project explores how conversational interfaces and tactile interaction can teach earning, saving, and investing in an engaging way.",
+    "imageNames": [
+      "TeddyBank.png"
+    ],
+    "github": "https://github.com/galitau/PiggyKidsApp-ElleHacks2026"
+  },
+  {
+    "id": 9,
+    "title": "SquatCAM | Clinical Exercise Monitoring",
+    "category": "software",
+    "tags": ["AI/ML", "React", "Biomedical"],
+    "description": "Winner of 'Most Ethical Solution' at the UWaterloo HealthTech Innovation Challenge. SquatCAM is a vision-based rehabilitation monitoring platform developed for CCCARE (Centre for Community, Clinical and Applied Research Excellence) that uses computer vision to recognize exercises, count repetitions, and stream physiological data to a real-time clinician dashboard. Designed with privacy-first principles, it leverages biometric embeddings for identification and edge processing to keep sensitive video data local while enabling kinesiologists to supervise multiple patients and receive safety alerts.",
+    "imageNames": [
+      "SquatCAM.png"
+    ],
+    "github": "https://github.com/galitau/CCCare"
+  },
+  {
     "id": 1,
     "title": "Pubmed RAG Researcher",
     "category": "software",
