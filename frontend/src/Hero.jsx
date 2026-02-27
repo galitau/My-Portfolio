@@ -47,6 +47,7 @@ function Hero() {
             <h3>Bachelor of Applied Science (BASc), Biomedical Engineering</h3>
             <p className="education-detail">University of Waterloo | 2025 - 2030</p>
             <p className="education-detail">GPA: 4.0</p>
+            <p className="education-detail">President's Scholarship of Distinction (+95% average) | 2025</p>
             <p className="education-detail">Design Teams and Clubs:</p>
             <ul className="clubs-list-items">
               <li>
@@ -66,7 +67,8 @@ function Hero() {
               <li>
                 WATbotics Design Team | Jan 2026 - Present
                 <ul className="clubs-sublist">
-                  <li>Just started, we'll see what I make...</li>
+                  <li>Making the iron man helmet!</li>
+                  <li>Worked on the closing mechanism of the face shield and CAD modelling of the face and chin</li>
                 </ul>
               </li>
               <li>

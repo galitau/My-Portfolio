@@ -112,6 +112,7 @@ function MobileHome({ projects }) {
           <h3>Bachelor of Applied Science (BASc), Biomedical Engineering</h3>
           <p className="mobile-education-detail">University of Waterloo | 2025 - 2030</p>
           <p className="mobile-education-detail">GPA: 4.0</p>
+          <p className="mobile-education-detail">President's Scholarship of Distinction (+95% average) | 2025</p>
           <p className="mobile-education-detail">Design Teams and Clubs:</p>
           <ul className="mobile-clubs-list">
             <li>
@@ -131,7 +132,8 @@ function MobileHome({ projects }) {
             <li>
               <strong>WATbotics Design Team</strong> | Jan 2026 - Present
               <ul className="mobile-clubs-sublist">
-                <li>Just started, we'll see what I make...</li>
+                <li>Making the iron man helmet!</li>
+                <li>Worked on the closing mechanism of the face shield and CAD modelling of the face and chin</li>
               </ul>
             </li>
             <li>
