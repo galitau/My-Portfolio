@@ -71,7 +71,7 @@
   },
   {
     "id": 5,
-    "title": "Toy Jeep Model and Assembly",
+    "title": "Jeep Model and Assembly",
     "category": "mechanical",
     "tags": ["CAD/Design"],
     "description": "Modeled a multi-component assembly in SolidWorks, including a chassis, independent door panels, and wheel systems, utilizing standard mates to define mechanical relationships between moving parts. Generated technical engineering drawings featuring exploded views and cross-sections to visualize internal component clearances and communicate the step-by-step assembly process.",

@@ -3,6 +3,17 @@ import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import profilePic from './assets/ProfilePic.jpg';
 
+function MobileAwardCard({ award }) {
+  return (
+    <motion.div className="mobile-award-card" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <h3>{award.title}</h3>
+      <p className="award-date">{award.date}</p>
+      <p className="award-issuer">{award.issuer}</p>
+      <p className="award-description">{award.description}</p>
+    </motion.div>
+  );
+}
+
 function MobileHome({ projects }) {
   const [projectFilter, setProjectFilter] = useState('all');
 
@@ -21,6 +32,58 @@ function MobileHome({ projects }) {
     "Physics 1: Statics", "Introduction to Biomedical Design", "Communications in Biomedical Engineering - Visualization", 
     "Human Factors in the Design of Biomedical and Health Systems", "Calculus 1", "Calculus 2", "Matrices and Linear Systems",
     "Chemistry Principles"
+  ];
+
+  const awards = [
+    {
+      id: 1,
+      title: "1st Place, Wealthsimple Challenge",
+      date: "Feb 2026",
+      issuer: "Issued by Wealthsimple · ElleHacks 2026",
+      description: "Created an innovative solution that makes learning about money fun and engaging for young audiences, teaching financial literacy concepts in creative and accessible ways."
+    },
+    {
+      id: 2,
+      title: "Most Ethical Solution Distinction",
+      date: "Feb 2026",
+      issuer: "University of Waterloo · Health Tech Innovation Challenge",
+      description: "Awarded for SquatCAM, a computer vision solution that recognizes exercises and counts reps, uses biometric embeddings to identify patients, and integrates live sensor data to monitor vitals. Features a real-time dashboard for clinicians to supervise multiple patients and receive safety alerts."
+    },
+    {
+      id: 3,
+      title: "Best Use of Snowflake API",
+      date: "Jan 2026",
+      issuer: "Issued by Major League Hacking (MLH) · SheHacks+10 Hackathon",
+      description: "Won for BrickbyBrick solution developed at Western University's SheHacks+10 Hackathon. BrickbyBrick is a fintech-inspired web application designed to address the housing affordability crisis by fractionalizing home ownership. The platform creates a marketplace where prospective homeowners can list properties for a fraction of their market value, while independent investors provide the remaining capital in exchange for equity shares in the home."
+    },
+    {
+      id: 4,
+      title: "Most Innovative Feature Award",
+      date: "Nov 2025",
+      issuer: "Waterloo Women In Engineering Hackathon · Issued by PointClickCare",
+      description: "Recognized for StoryBridge, an AI-driven platform that transforms seniors' voice-recorded memories into engaging, illustrated storybooks, bridging generations and preserving family history."
+    },
+    {
+      id: 5,
+      title: "Top 16 Finalist, Velocity AgeTech Innovation Challenge",
+      date: "Sep 2025",
+      issuer: "Issued by CABHI, NAR, and Velocity",
+      description: "Recognized as a Top 16 finalist for designing a real-world solution to shape the future of aging and community care."
+    },
+    {
+      id: 6,
+      title: "6th Internationally, Medical Law and Ethics Competition",
+      date: "Jun 2025",
+      issuer: "Future Health Professionals (HOSA)",
+      description: "Placed 3rd in Canada and 6th internationally in the HOSA Medical Law and Ethics competition. Competed against hundreds of students globally, demonstrating mastery of legal terminology, healthcare statutes, and ethical case studies."
+    },
+    {
+      id: 7,
+      title: "2x National Runner-Up, Healthcare Administration Competition",
+      date: "2024 & 2025",
+      issuer: "Future Business Leaders of America (FBLA)",
+      description: "Recognized as a 2x Top 20 national finalist in the Healthcare Administration competition. Mastered the foundational pillars of healthcare administration, including HIPAA compliance, medical ethics, and the revenue cycle involving ICD-10/CPT coding and insurance reimbursement. This provided a comprehensive understanding of the legal and financial frameworks that govern clinical operations and patient data management."
+    }
   ];
 
   // Filter projects based on selected filter
@@ -143,6 +206,16 @@ function MobileHome({ projects }) {
               <strong>Karate and Jiu Jitsu Club</strong>
             </li>
           </ul>
+        </div>
+      </section>
+
+      {/* Honours and Awards Section */}
+      <section className="mobile-section">
+        <h2>Honours & Awards</h2>
+        <div className="mobile-awards-grid">
+          {awards.map((award) => (
+            <MobileAwardCard key={award.id} award={award} />
+          ))}
         </div>
       </section>
 
