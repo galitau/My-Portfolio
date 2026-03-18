@@ -33,6 +33,9 @@ import assemblylist from './assets/AssemblyList.png';
 import wheeloffortune from './assets/WheelGame.png';
 import squatCam from './assets/SquatCAM.png';
 import teddyBank from './assets/TeddyBank.png';
+import methaneCapture1 from './assets/MethaneCapture1.jpg';
+import methaneCapture2 from './assets/MethaneCapture2.png';
+import methaneCapture3 from './assets/MethaneCapture3.png';
 
 
 // Connects the JSON text to the import above
@@ -56,7 +59,10 @@ const imageMap = {
   'AssemblyList.png': assemblylist,
   'WheelGame.png': wheeloffortune,
   'SquatCAM.png': squatCam,
-  'TeddyBank.png': teddyBank
+  'TeddyBank.png': teddyBank,
+  'MethaneCapture1.jpg': methaneCapture1,
+  'MethaneCapture2.png': methaneCapture2,
+  'MethaneCapture3.png': methaneCapture3
 };
 
 function App() {

@@ -22,6 +22,20 @@
     "github": "https://github.com/galitau/CCCare"
   },
   {
+    "id": 5,
+    "title": "Jeep Model and Assembly",
+    "category": "mechanical",
+    "tags": ["CAD/Design"],
+    "description": "Modeled a multi-component assembly in SolidWorks, including a chassis, independent door panels, and wheel systems, utilizing standard mates to define mechanical relationships between moving parts. Generated technical engineering drawings featuring exploded views and cross-sections to visualize internal component clearances and communicate the step-by-step assembly process.",
+    "imageNames": [
+      "JeepVideo.mp4",
+      "JeepAssemblyImage.png",
+      "JeepExplodedView.png",
+      "JeepExplodedViewDrawing.png",
+      "JeepCrossSection.png"
+    ]
+  },
+  {
     "id": 1,
     "title": "Pubmed RAG Researcher",
     "category": "software",
@@ -31,6 +45,20 @@
       "pubmedPhoto.png"
     ],
     "github": "https://github.com/galitau/Pubmed-RAG"
+  },
+  {
+    "id": 4,
+    "title": "Dynamic Motion Translation Mechanism",
+    "category": "mechanical",
+    "tags": ["CAD/Design", "Mechanics"],
+    "description": "Engineered a kinetic mechanical flower assembly in SolidWorks, utilizing crossed helical gears to translate rotational input into the synchronized blooming of multiple petals. Conducted rigorous tolerance analysis to optimize component fit for manufacturing, ensuring smooth mechanical operation with minimal friction. Fabricated and assembled physical prototypes, iterating on gear geometry to maximize power transmission efficiency and structural integrity.",
+    "imageNames": [
+      "Puzzle video~2.mp4",
+      "Open Flower.jpeg",
+      "Closed Flower.jpeg",
+      "AssemblyList.png",
+      "Design Process Flower.jpeg"
+    ]
   },
   {
     "id": 2,
@@ -54,34 +82,6 @@
       "timeSensePhoto.png"
     ],
     "github": "https://github.com/galitau/TimeSense"
-  },
-  {
-    "id": 4,
-    "title": "Dynamic Motion Translation Mechanism",
-    "category": "mechanical",
-    "tags": ["CAD/Design", "Mechanics"],
-    "description": "Engineered a kinetic mechanical flower assembly in SolidWorks, utilizing crossed helical gears to translate rotational input into the synchronized blooming of multiple petals. Conducted rigorous tolerance analysis to optimize component fit for manufacturing, ensuring smooth mechanical operation with minimal friction. Fabricated and assembled physical prototypes, iterating on gear geometry to maximize power transmission efficiency and structural integrity.",
-    "imageNames": [
-      "Puzzle video~2.mp4",
-      "Open Flower.jpeg",
-      "Closed Flower.jpeg",
-      "AssemblyList.png",
-      "Design Process Flower.jpeg"
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Jeep Model and Assembly",
-    "category": "mechanical",
-    "tags": ["CAD/Design"],
-    "description": "Modeled a multi-component assembly in SolidWorks, including a chassis, independent door panels, and wheel systems, utilizing standard mates to define mechanical relationships between moving parts. Generated technical engineering drawings featuring exploded views and cross-sections to visualize internal component clearances and communicate the step-by-step assembly process.",
-    "imageNames": [
-      "JeepVideo.mp4",
-      "JeepAssemblyImage.png",
-      "JeepExplodedView.png",
-      "JeepExplodedViewDrawing.png",
-      "JeepCrossSection.png"
-    ]
   },
   {
     "id": 6,
@@ -115,5 +115,17 @@
       "WheelGame.png"
     ],
     "github": "https://github.com/galitau/WheelOfFortuneGame"
+  },
+  {
+    "id": 11,
+    "title": "Methane Adaptive Capture System for Tailings Ponds",
+    "category": "mechanical",
+    "tags": ["CAD/Design", "Robotics", "Automation", "Environmental"],
+    "description": "Developed an eco-mimicry-inspired robotic solution to track and capture shifting methane hotspots in industrial tailings ponds. By leveraging autonomous navigation and real-time fleet management software, the system provides a high-efficiency alternative to traditional emissions monitoring. The project involved rigorous financial modeling of a 15-year lifecycle and the engineering of intrinsically safe hardware to meet global IECEx standards, successfully transforming a volatile greenhouse gas into a controlled, lower-impact emission.",
+    "imageNames": [
+      "MethaneCapture1.jpg",
+      "MethaneCapture2.png",
+      "MethaneCapture3.png"
+    ]
   }
 ]
