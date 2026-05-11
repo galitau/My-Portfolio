@@ -47,6 +47,17 @@
     "github": "https://github.com/galitau/Pubmed-RAG"
   },
   {
+    "id": 12,
+    "title": "ThreeOneOne",
+    "category": "software",
+    "tags": ["Data Eng", "AI/ML", "React", "Python"],
+    "description": "ThreeOneOne captures public safety signals from social media posts that often precede official 311 calls. It uses a tiered AI pipeline where Gemini 3.1 Flash Lite filters out noise and Gemini 2.5 Flash analyzes images to confirm hazards like flooding or fallen trees. The platform solves the problem of missing metadata by using grounded spatial reasoning to find precise GPS coordinates from landmarks and street signs. All reports are centralized in a Snowflake Geospatial Lake where Cortex AI summarizes long threads into one-sentence dispatch notes for city emergency teams.",
+    "imageNames": [
+      "311LiveMap.png"
+    ],
+    "github": "https://github.com/galitau/ThreeOneOne-ConHacks2026"
+  },
+  {
     "id": 4,
     "title": "Dynamic Motion Translation Mechanism",
     "category": "mechanical",

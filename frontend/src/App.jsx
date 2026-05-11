@@ -36,6 +36,7 @@ import teddyBank from './assets/TeddyBank.png';
 import methaneCapture1 from './assets/MethaneCapture1.jpg';
 import methaneCapture2 from './assets/MethaneCapture2.png';
 import methaneCapture3 from './assets/MethaneCapture3.png';
+import img311LiveMap from './assets/311LiveMap.png';
 
 
 // Connects the JSON text to the import above
@@ -62,7 +63,8 @@ const imageMap = {
   'TeddyBank.png': teddyBank,
   'MethaneCapture1.jpg': methaneCapture1,
   'MethaneCapture2.png': methaneCapture2,
-  'MethaneCapture3.png': methaneCapture3
+  'MethaneCapture3.png': methaneCapture3,
+  '311LiveMap.png': img311LiveMap
 };
 
 function App() {
