@@ -37,6 +37,10 @@ import methaneCapture1 from './assets/MethaneCapture1.jpg';
 import methaneCapture2 from './assets/MethaneCapture2.png';
 import methaneCapture3 from './assets/MethaneCapture3.png';
 import img311LiveMap from './assets/311LiveMap.png';
+import doorLock from './assets/DoorLock.jpg';
+import doorLockSchematics from './assets/DoorLockSchematics.png';
+import doorLockVideo from './assets/DoorLockVideo.mp4';
+import arduinoCodeSnippet from './assets/ArduinoCodeSnippet.png';
 
 
 // Connects the JSON text to the import above
@@ -64,7 +68,11 @@ const imageMap = {
   'MethaneCapture1.jpg': methaneCapture1,
   'MethaneCapture2.png': methaneCapture2,
   'MethaneCapture3.png': methaneCapture3,
-  '311LiveMap.png': img311LiveMap
+  '311LiveMap.png': img311LiveMap,
+  'DoorLock.jpg': doorLock,
+  'DoorLockSchematics.png': doorLockSchematics,
+  'DoorLockVideo.mp4': doorLockVideo,
+  'ArduinoCodeSnippet.png': arduinoCodeSnippet
 };
 
 function App() {
@@ -87,7 +95,9 @@ function App() {
   const projects = projectsData.map(project => ({
     ...project, // Keep title, description, category...
     // Look up the real image file using the name
-    images: (project.imageNames || []).map(name => imageMap[name] || null)
+    images: (project.imageNames || []).map(name => imageMap[name] || null),
+    softwareImages: (project.softwareImageNames || project.imageNames || [])
+      .map(name => imageMap[name] || null)
   }));
 
   // Renders the current page based on state

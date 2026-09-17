@@ -5,9 +5,10 @@ import { Github, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 function ProjectCard({ project, variant = 'flip' }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const cardImages = variant === 'flip' ? (project.softwareImages || project.images) : project.images;
 
   // Gets the current file 
-  const currentFile = (project.images && project.images[currentIndex]) || "";
+  const currentFile = (cardImages && cardImages[currentIndex]) || "";
   
   // Checks if it is a video
   const isVideo = typeof currentFile === 'string' && currentFile.endsWith('.mp4');
@@ -15,12 +16,12 @@ function ProjectCard({ project, variant = 'flip' }) {
   // --- SLIDER LOGIC ---
   const nextImage = (e) => {
     e.stopPropagation();
-    setCurrentIndex((prev) => prev === project.images.length - 1 ? 0 : prev + 1);
+    setCurrentIndex((prev) => prev === cardImages.length - 1 ? 0 : prev + 1);
   };
 
   const prevImage = (e) => {
     e.stopPropagation();
-    setCurrentIndex((prev) => prev === 0 ? project.images.length - 1 : prev - 1);
+    setCurrentIndex((prev) => prev === 0 ? cardImages.length - 1 : prev - 1);
   };
 
   // --- FLIP VARIANT (Software) ---
@@ -32,7 +33,7 @@ function ProjectCard({ project, variant = 'flip' }) {
           <div className="card-front">
             <div className="card-image">
               {/* Safety check for images */}
-              <img src={project.images && project.images[0] ? project.images[0] : ""} alt={project.title} />
+              <img src={cardImages && cardImages[0] ? cardImages[0] : ""} alt={project.title} />
             </div>
             <div className="card-content">
               <h3>{project.title}</h3>
@@ -73,17 +74,16 @@ function ProjectCard({ project, variant = 'flip' }) {
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           ) : (
-            <img src={currentFile} alt={project.title} />
+            <motion.img 
+              key={currentIndex}
+              src={currentFile} 
+              alt={project.title}
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}
+            />
           )}
-          <motion.img 
-            key={currentIndex}
-            src={project.images[currentIndex]} 
-            alt={project.title}
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}
-          />
           
           {/* CONTROLS: Only show if there is more than 1 image */}
-          {project.images.length > 1 && (
+          {cardImages.length > 1 && (
             <>
               {/* Arrows */}
               <button className="slider-btn prev" onClick={prevImage}><ChevronLeft size={24} /></button>
@@ -91,7 +91,7 @@ function ProjectCard({ project, variant = 'flip' }) {
               
               {/* DOTS (The missing part!) */}
               <div className="slider-dots">
-                {project.images.map((_, index) => (
+                {cardImages.map((_, index) => (
                   <span 
                     key={index} 
                     className={`dot ${index === currentIndex ? 'active' : ''}`}

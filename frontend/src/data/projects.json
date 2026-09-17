@@ -72,6 +72,23 @@
     ]
   },
   {
+    "id": 13,
+    "title": "2FA Door Lock Mechanism",
+    "category": "both",
+    "tags": ["Arduino", "Embedded Sys", "CAD/Design", "Mechanics"],
+    "description": "An ESP32-powered physical two-factor authentication access control system featuring RFID UID authentication, 4x4 keypad PIN entry, an I2C OLED display, and a stepper-driven deadbolt multiplexed via a 74HC595 shift register. The system also implements non-blocking lockout escalation logic for secure, responsive access control.",
+    "imageNames": [
+      "DoorLock.jpg",
+      "DoorLockSchematics.png",
+      "DoorLockVideo.mp4",
+      "ArduinoCodeSnippet.png"
+    ],
+    "softwareImageNames": [
+      "DoorLockSchematics.png"
+    ],
+    "github": "https://github.com/galitau/2FA-Door-Lock-Mechanism"
+  },
+  {
     "id": 2,
     "title": "Accessible Product Redesign (Settlers of Catan)",
     "category": "mechanical",

@@ -159,7 +159,7 @@ function MobileHome({ projects }) {
               <ProjectCard 
                 key={project.id} 
                 project={project} 
-                variant={project.category === 'mechanical' ? "slider" : "flip"} 
+                variant={projectFilter === 'mechanical' ? "slider" : "flip"} 
               />
             ))
           ) : (
