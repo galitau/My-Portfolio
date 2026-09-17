@@ -1,13 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import CourseTimeline from './CourseTimeline';
 
 function Software({ projects }) {
-  const softwareCourses = [
-    "Data Structures & Algorithms", "Digital Computation",
-    "Calculus 1", "Calculus 2", "Calculus 3", "Matrices and Linear Systems",
-  ];
-
   // Filter projects for software category
   const softwareProjects = projects.filter(project => 
     project.category === "software" || project.category === "both"
@@ -24,14 +20,7 @@ function Software({ projects }) {
       {/* Coursework */}
       <section className="coursework-section">
         <h2>Relevant Coursework</h2>
-        <div className="coursework-grid">
-          {softwareCourses.map((course, i) => (
-            <div key={i} className="course-item">
-              <span className="course-number">{String(i + 1).padStart(2, '0')}</span>
-              <span>{course}</span>
-            </div>
-          ))}
-        </div>
+        <CourseTimeline />
       </section>
 
       {/* Projects Grid */}

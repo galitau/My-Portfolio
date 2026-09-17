@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import CourseTimeline from './CourseTimeline';
 import profilePic from './assets/ProfilePic.jpg';
 
 function MobileAwardCard({ award }) {
@@ -21,18 +22,6 @@ function MobileHome({ projects }) {
     "Web Dev", "AI/ML", "Mobile App", "CAD/Design", "Robotics",
     "Circuits", "Cloud Comp", "Embedded Sys", "Data Eng", "Mechanics",
     "Python", "C++", "Java", "React", "SQL", "Biomedical"
-  ];
-
-  const softwareCourses = [
-    "Data Structures & Algorithms", "Digital Computation",
-    "Calculus 1", "Calculus 2", "Calculus 3", "Matrices and Linear Systems",
-  ];
-
-  const mechanicalCourses = [
-    "Physics 1: Statics", "Physics 2: Dynamics", "Mechanics of Deformable Solids", "Deformable Solid Mechanics Lab",
-    "Materials Science", "Introduction to Biomedical Design", "Communications in Biomedical Engineering - Visualization", 
-    "Human Factors in the Design of Biomedical and Health Systems", "Calculus 1", "Calculus 2", "Calculus 3",
-    "Matrices and Linear Systems", "Chemistry Principles"
   ];
 
   const awards = [
@@ -223,26 +212,7 @@ function MobileHome({ projects }) {
       {/* Coursework Section */}
       <section className="mobile-section">
         <h2>Relevant Coursework</h2>
-        
-        <h3>Software Engineering</h3>
-        <div className="mobile-coursework-grid">
-          {softwareCourses.map((course, i) => (
-            <div key={i} className="mobile-course-item">
-              <span className="course-number">{String(i + 1).padStart(2, '0')}</span>
-              <span>{course}</span>
-            </div>
-          ))}
-        </div>
-
-        <h3>Mechanical Engineering</h3>
-        <div className="mobile-coursework-grid">
-          {mechanicalCourses.map((course, i) => (
-            <div key={i} className="mobile-course-item">
-              <span className="course-number">{String(i + 1).padStart(2, '0')}</span>
-              <span>{course}</span>
-            </div>
-          ))}
-        </div>
+        <CourseTimeline />
       </section>
 
       {/* Skills Marquee */}

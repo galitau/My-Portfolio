@@ -1,16 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import CourseTimeline from './CourseTimeline';
 
 
 function Mechanical({ projects }) {
-  const mechanicalCourses = [
-    "Physics 1: Statics", "Physics 2: Dynamics", "Mechanics of Deformable Solids", "Deformable Solid Mechanics Lab",
-    "Materials Science", "Introduction to Biomedical Design", "Communications in Biomedical Engineering - Visualization", 
-    "Human Factors in the Design of Biomedical and Health Systems", "Calculus 1", "Calculus 2", "Calculus 3",
-    "Matrices and Linear Systems", "Chemistry Principles"
-  ];
-
   // Filter projects for mechanical category
   const mechanicalProjects = projects.filter(project => 
     project.category === "mechanical" || project.category === "both"
@@ -26,14 +20,7 @@ function Mechanical({ projects }) {
 
       <section className="coursework-section">
         <h2>Relevant Coursework</h2>
-        <div className="coursework-grid">
-          {mechanicalCourses.map((course, i) => (
-            <div key={i} className="course-item">
-              <span className="course-number">{String(i + 1).padStart(2, '0')}</span>
-              <span>{course}</span>
-            </div>
-          ))}
-        </div>
+        <CourseTimeline />
       </section>
 
       <section className="projects-section">

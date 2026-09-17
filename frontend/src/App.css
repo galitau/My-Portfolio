@@ -438,25 +438,56 @@ body {
   box-shadow: 0 4px 12px var(--shadow-hover);
 }
 
-.coursework-section { margin-bottom: 5rem; text-align: center; }
-.coursework-grid {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem;
-  width: 100%; margin: 0 auto;
+.coursework-section { margin-bottom: 3.5rem; text-align: center; }
+.course-timeline {
+  position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+  width: 100%; margin: 0 auto; padding: 2rem 1rem 10.5rem;
 }
 
-.course-item {
-  position: relative; padding: 1.25rem 1rem 1.25rem 3.25rem; background: var(--white);
-  border: 1px solid rgba(189, 195, 199, 0.7); border-top: 3px solid var(--secondary);
-  border-radius: 0.5rem; font-size: 1rem; font-weight: 600; text-align: left;
-  box-shadow: 0 0.25rem 1rem var(--shadow); display: flex; align-items: center;
-  min-height: 5rem; transition: transform 0.25s ease, box-shadow 0.25s ease;
+.timeline-track {
+  position: absolute; top: 4.25rem; left: 16%; right: 16%; height: 0.25rem;
+  background: linear-gradient(90deg, var(--secondary), var(--accent), var(--secondary));
+  border-radius: 1rem; opacity: 0.65;
 }
-.course-item:hover { transform: translateY(-4px); background: #f8f9fa; box-shadow: 0 0.5rem 1.25rem var(--shadow-hover); }
 
-.course-number {
-  position: absolute; left: 1rem; top: 50%; transform: translateY(-50%);
-  color: var(--secondary); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em;
+.course-term { position: relative; z-index: 1; text-align: center; }
+.term-toggle {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  width: 100%; min-height: 6rem; padding: 0.5rem; color: var(--text);
+  background: transparent; border: 0; cursor: pointer; font: inherit;
 }
+.term-toggle::before {
+  content: ''; width: 2.5rem; height: 2.5rem; margin-bottom: 0.75rem;
+  background: var(--white); border: 0.35rem solid var(--secondary); border-radius: 50%;
+  box-shadow: 0 0 0 0.35rem var(--bg), 0 0.25rem 0.75rem var(--shadow-hover);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.term-toggle:hover::before, .course-term:focus-within .term-toggle::before,
+.course-term.is-open .term-toggle::before { transform: scale(1.2); border-color: var(--accent); }
+.term-icon {
+  position: absolute; top: 1.47rem; left: 50%; z-index: 2;
+  display: grid; place-items: center; color: var(--primary);
+  transform: translateX(-50%); pointer-events: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.course-term:hover .term-icon, .course-term:focus-within .term-icon,
+.course-term.is-open .term-icon { color: var(--accent); transform: translateX(-50%) scale(1.12); }
+.term-index { color: var(--text-light); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; }
+.term-label { color: var(--primary); font-size: 2rem; font-weight: 800; line-height: 1; }
+.term-subtitle { margin-top: 0.35rem; color: var(--secondary); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+.course-term-popover {
+  position: absolute; top: 9.75rem; left: 50%; width: min(22rem, 90%); padding: 1.25rem;
+  text-align: left; background: #fffdf8; border: 1px solid rgba(189, 195, 199, 0.85);
+  border-left: 0.3rem solid var(--accent); border-radius: 0.25rem;
+  box-shadow: 0 0.75rem 2rem rgba(44, 62, 80, 0.14); opacity: 0; pointer-events: none;
+  transform: translate(-50%, 0.75rem); transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.course-term:hover .course-term-popover, .course-term:focus-within .course-term-popover,
+.course-term.is-open .course-term-popover { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+.popover-kicker { margin-bottom: 0.75rem; color: var(--accent); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+.course-term-popover ul { display: grid; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
+.course-term-popover li { position: relative; padding-left: 1rem; color: var(--text); font-size: 0.95rem; line-height: 1.35; }
+.course-term-popover li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 0.35rem; height: 0.35rem; background: var(--accent); border-radius: 50%; }
 
 .projects-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem;
@@ -813,28 +844,6 @@ body {
   border-left: 2px solid var(--border);
 }
 
-/* Mobile Coursework */
-.mobile-coursework-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.mobile-course-item {
-  position: relative; padding: 1.1rem 1rem 1.1rem 3rem;
-  background: var(--white);
-  border: 1px solid rgba(189, 195, 199, 0.7); border-top: 3px solid var(--secondary);
-  border-radius: 6px; font-size: 1rem; font-weight: 600;
-  box-shadow: 0 2px 8px var(--shadow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.mobile-course-item:hover {
-  transform: translateY(-2px); background: #f8f9fa;
-  box-shadow: 0 4px 12px var(--shadow-hover);
-}
-
 /* Mobile Awards */
 .mobile-awards-container {
   display: grid;
@@ -1020,6 +1029,61 @@ body {
   .main-content {
     padding-top: 0 !important; /* Remove top padding since no navbar */
   }
+
+  .course-timeline {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .timeline-track {
+    top: 2.75rem;
+    bottom: 2.75rem;
+    left: 1.75rem;
+    right: auto;
+    width: 0.25rem;
+    height: auto;
+    background: linear-gradient(180deg, var(--secondary), var(--accent), var(--secondary));
+  }
+
+  .course-term { text-align: left; }
+
+  .term-toggle {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 0.75rem;
+    align-items: center;
+    min-height: 5rem;
+    padding: 0.5rem 0;
+    text-align: left;
+  }
+
+  .term-toggle::before {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0 0 0 0.5rem;
+  }
+
+  .term-icon {
+    top: 1.38rem;
+    left: 1.75rem;
+  }
+
+  .term-index { grid-column: 2; grid-row: 1; }
+  .term-label { grid-column: 2; grid-row: 2; }
+  .term-subtitle { grid-column: 2; grid-row: 2; margin: 0 0 0 3.25rem; align-self: center; }
+
+  .course-term-popover {
+    position: static;
+    width: auto;
+    margin: 0 0 0.75rem 3.5rem;
+    transform: none;
+  }
+
+  .course-term:hover .course-term-popover,
+  .course-term:focus-within .course-term-popover,
+  .course-term.is-open .course-term-popover { transform: none; }
 }
 
 /* ==================== RESPONSIVE Section ==================== */
