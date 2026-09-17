@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 function Software({ projects }) {
   const softwareCourses = [
     "Data Structures & Algorithms", "Digital Computation",
-    "Calculus 1", "Calculus 2", "Matrices and Linear Systems",
+    "Calculus 1", "Calculus 2", "Calculus 3", "Matrices and Linear Systems",
   ];
 
   // Filter projects for software category
@@ -26,7 +26,10 @@ function Software({ projects }) {
         <h2>Relevant Coursework</h2>
         <div className="coursework-grid">
           {softwareCourses.map((course, i) => (
-            <div key={i} className="course-item">{course}</div>
+            <div key={i} className="course-item">
+              <span className="course-number">{String(i + 1).padStart(2, '0')}</span>
+              <span>{course}</span>
+            </div>
           ))}
         </div>
       </section>

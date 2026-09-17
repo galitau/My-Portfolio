@@ -5,9 +5,10 @@ import ProjectCard from './ProjectCard';
 
 function Mechanical({ projects }) {
   const mechanicalCourses = [
-    "Physics 1: Statics", "Introduction to Biomedical Design", "Communications in Biomedical Engineering - Visualization", 
-    "Human Factors in the Design of Biomedical and Health Systems", "Calculus 1", "Calculus 2", "Matrices and Linear Systems",
-    "Chemistry Principles"
+    "Physics 1: Statics", "Physics 2: Dynamics", "Mechanics of Deformable Solids", "Deformable Solid Mechanics Lab",
+    "Materials Science", "Introduction to Biomedical Design", "Communications in Biomedical Engineering - Visualization", 
+    "Human Factors in the Design of Biomedical and Health Systems", "Calculus 1", "Calculus 2", "Calculus 3",
+    "Matrices and Linear Systems", "Chemistry Principles"
   ];
 
   // Filter projects for mechanical category
@@ -27,7 +28,10 @@ function Mechanical({ projects }) {
         <h2>Relevant Coursework</h2>
         <div className="coursework-grid">
           {mechanicalCourses.map((course, i) => (
-            <div key={i} className="course-item">{course}</div>
+            <div key={i} className="course-item">
+              <span className="course-number">{String(i + 1).padStart(2, '0')}</span>
+              <span>{course}</span>
+            </div>
           ))}
         </div>
       </section>
